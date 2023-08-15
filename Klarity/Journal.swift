@@ -19,9 +19,10 @@ struct Journal: View {
                 .font(.title)
                 .fontWeight(.bold)
         
-            TextField("Begin writing journal entry", text: $text)
+            TextField("Begin writing your daily journal entry...", text: $text)
                 .padding()
                 .border(Color.blue, width: 4)
+            
         }
     }
     
