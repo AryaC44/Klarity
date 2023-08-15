@@ -9,19 +9,40 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            Text("Welcome to Klarity")
-        }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+        
+        
+        NavigationStack {
+            
+            VStack {
+                Text("Welcome to Klarity!")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundColor(Color.blue)
+                    .multilineTextAlignment(.center)
+                
+                VStack {
+                    NavigationLink(destination: Journal()) {
+                        Text("Journal") }
+                        
+                    NavigationLink(destination: ToDoList()) {
+                        Text("To-Do List") }
+                            
+                    NavigationLink(destination: Affirmations()){
+                        Text("Affirmations") }
+                                
+                    NavigationLink(destination: Breathing()) {
+                        Text("Breathing Exercises") }
+                                    
+                                }
+                            }
+                        }
+                    }
+                    
+                }
+            
+                struct ContentView_Previews: PreviewProvider {
+                    static var previews: some View {
+                        ContentView()
+                    }
+                }
+        
