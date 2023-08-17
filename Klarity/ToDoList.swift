@@ -52,10 +52,7 @@ struct ToDoList: View {
                 ForEach (toDoItems) {
                     toDoItem in
                     
-                    
-                    
-                    Text(toDoItem.title)
-                    
+                    Text("‼️" + toDoItem.title)
                 }
                 
                 

@@ -21,21 +21,18 @@ struct NewToDoView: View {
             
             Text("Task title:")
             
-            TextField("Enter the task description...", text: $title).padding()
+            TextField("Enter task description...", text: $title).padding()
                 .background(Color(.systemGroupedBackground))
                     .cornerRadius(15)
                     .padding()
             
             Toggle(isOn: $isImportant) {
-                Text("Is this task important?")
-                
-                
-                
+                Text("For school?")
+            
                 Button(action: {
                     
                     self.addTask(title: self.title, isImportant: self.isImportant)
-                    
-                    
+
                 }) {
                     Text("Add")
                 }
@@ -44,6 +41,8 @@ struct NewToDoView: View {
             }.padding()
             
         }.padding()
+        
+       
 
     }
     

@@ -13,31 +13,45 @@ struct ContentView: View {
         
         NavigationStack {
             
-            VStack {
-                Text("Welcome to Klarity!")
-                    .font(.largeTitle)
-                    .fontWeight(.bold)
-                    .foregroundColor(Color.blue)
-                    .multilineTextAlignment(.center)
+            ZStack {Color(red: 0.775, green: 0.859, blue: 0.955) .ignoresSafeArea()
                 
                 VStack {
-                    NavigationLink(destination: Journal()) {
-                        Text("Journal") }
+                    
+                    Text("Welcome to Klarity!")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566))
+                        .multilineTextAlignment(.center)
+                        .padding(40)
+                    
+                    VStack {
+                                        
+                        NavigationLink(destination: Journal()) {
+                            Text("Journal")
+                                .font(.title)
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
-                    NavigationLink(destination: ToDoList()) {
-                        Text("To-Do List") }
-                            
-                    NavigationLink(destination: Affirmations()){
-                        Text("Affirmations") }
-                                
-                    NavigationLink(destination: Breathing()) {
-                        Text("Breathing Exercises") }
-                                    
-                                }
-                            }
+                        NavigationLink(destination: ToDoList()) {
+                            Text("To-Do List")
+                                .font(.title)
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
+                        
+                        NavigationLink(destination: Affirmations()){
+                            Text("Affirmations")
+                                .font(.title)
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
+                        
+                        NavigationLink(destination: Breathing()) {
+                            Text("Breathing Exercises")
+                                .font(.title)
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
+                        
                         }
                     }
-                    
+                }
+            }
+        }
+        
                 }
             
                 struct ContentView_Previews: PreviewProvider {
