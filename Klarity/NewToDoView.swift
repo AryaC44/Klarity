@@ -27,7 +27,7 @@ struct NewToDoView: View {
                     .padding()
             
             Toggle(isOn: $isImportant) {
-                Text("For school?")
+                Text("Is this task urgent?")
             
                 Button(action: {
                     

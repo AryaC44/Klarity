@@ -23,6 +23,7 @@ struct ContentView: View {
                         .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566))
                         .multilineTextAlignment(.center)
                         .padding(40)
+                    Text("Mental Health")
                     
                     VStack {
                                         
@@ -43,6 +44,11 @@ struct ContentView: View {
                         
                         NavigationLink(destination: Breathing()) {
                             Text("Breathing Exercises")
+                                .font(.title)
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
+                        
+                        NavigationLink(destination: Help()) {
+                            Text("Resources")
                                 .font(.title)
                             .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         

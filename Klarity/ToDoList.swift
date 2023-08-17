@@ -12,11 +12,8 @@ struct ToDoList: View {
     @State private var showNewTask = false
     @State var toDoItems: [ToDoItem] = []
     
-    
-    
-    
-    
     var body: some View {
+        
         VStack {
             HStack {
                 //Add a Text View containing the string "ToDoList" and modifiers here
