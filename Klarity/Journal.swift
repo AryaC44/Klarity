@@ -15,90 +15,95 @@ struct Journal: View {
     
     var body: some View {
         
+        ZStack {Color(red: 0.998, green: 0.866, blue: 0.838).ignoresSafeArea()
             VStack {
-                
-                Text("Daily Journal")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .padding()
-                
-                
-                Text("How are you feeling today?")
-                    .font(.title)
-                
-                Button("Anxious") {
-                    answer = "😬"
+                VStack {
+                    
+                    Text("Daily Journal")
+                        .font(.title)
+                        .fontWeight(.bold)
+                        .multilineTextAlignment(.center)
+                        .padding()
+                    
+                    
+                    Text("How are you feeling today?")
+                        .font(.title)
+                        .multilineTextAlignment(.center)
+                    
+                    Button("Anxious") {
+                        answer = "😬"
+                    }
+                    Button("Sad") {
+                        answer = "😢"
+                    }
+                    Button("Angry") {
+                        answer = "😡"
+                    }
+                    
+                    Button("Happy") {
+                        answer = "😁"
+                    }
+                    
+                    Button("Scared") {
+                        answer = "😰"
+                    }
+                    
+                    
+                    Text(String(answer))
+                        .font(.system(size: 80))
+                    
+                    if answer == "😬" {
+                        Text("I'm anxious because...")
+                    } else if answer == "😢" {
+                        Text("I'm sad because...")
+                    } else if answer == "😡" {
+                        Text("I'm angry because...")
+                    } else if answer == "😁" {
+                        Text("I'm happy because...")
+                    } else if answer == "😰" {
+                        Text("I'm scared because...")
+                    }
+                    
+                    TextField("Write about how you're feeling...", text: $text, axis: .vertical)
+                        .padding()
+                        .border(Color.purple, width: 4)
                 }
-                Button("Sad") {
-                    answer = "😢"
+                
+                .padding()
+                
+                VStack {
+                    
+                    Text("Or if you are unsure of what to write, you can select a prompt below:")
+                        .padding()
+                    
+                    Button("Brain Dump") {
+                        prompt = ("What was the best part of your day?, What was the worst part of your day?")
+                    }
+                    
+                    Button("Instant Cheer-Up") {
+                        prompt = ("What is your favorite memory?, What are you grateful for?")
+                    }
+                    
+                    Button("Letting Go Of Worries") {
+                        prompt = ("What is worrying you?, How can you reframe this thought?")
+                    }
+                    
+                    Button("Self-Reflection") {
+                        prompt = ("What makes you hopeful?, What goals do you want to accomplish?")
+                    }
+                    
+                    Text(String(prompt))
+                    
+                    TextField("Write about prompt...", text: $text, axis: .vertical)
+                        .padding()
+                        .border(Color.blue, width: 4)
                 }
-                Button("Angry") {
-                    answer = "😡"
-                }
-                
-                Button("Happy") {
-                    answer = "😁"
-                }
-                
-                Button("Scared") {
-                    answer = "😰"
-                }
-                
-                
-                Text(String(answer))
-                    .font(.system(size: 80))
-                
-                if answer == "😬" {
-                    Text("I'm anxious because...")
-                } else if answer == "😢" {
-                    Text("I'm sad because...")
-                } else if answer == "😡" {
-                    Text("I'm angry because...")
-                } else if answer == "😁" {
-                    Text("I'm happy because...")
-                } else if answer == "😰" {
-                    Text("I'm scared because...")
-                }
-                
-                TextField("Write about how you're feeling...", text: $text, axis: .vertical)
-                    .padding()
-                    .border(Color.purple, width: 4)
+                .padding()
             }
             
-            .padding()
-            
-            VStack {
-                
-                Text("Or if you are unsure of what to write, you can select a prompt below:")
-                    .padding()
-                
-                Button("Brain Dump") {
-                    prompt = ("What was the best part of your day?, What was the worst part of your day?")
-                }
-                
-                Button("Instant Cheer-Up") {
-                    prompt = ("What is your favorite memory?, What are you grateful for?")
-                }
-                
-                Button("Letting Go Of Worries") {
-                    prompt = ("What is worrying you?, How can you reframe this thought?")
-                }
-                
-                Button("Self-Reflection") {
-                    prompt = ("What makes you hopeful?, What goals do you want to accomplish?")
-                }
-                
-                Text(String(prompt))
-                
-                TextField("Write about prompt...", text: $text, axis: .vertical)
-                    .padding(10)
-                    .border(Color.blue, width: 4)
-            }
-        }
-            
             
         }
-        
+    } }
         struct Journal_Previews: PreviewProvider {
             static var previews: some View {
                 Journal()

@@ -13,9 +13,11 @@ struct Affirmations: View {
     
     var body: some View {
         
+        ZStack {Color(red: 0.775, green: 0.716, blue: 0.841).ignoresSafeArea()
+            VStack {
         Text("Affirmations")
             .font(.largeTitle)
-            .fontWeight(.heavy)
+            .fontWeight(.bold)
             .padding(10)
         
         Text("If you are feeling stressed, sad, or anxious about anything, affirmations are a great way to ease your mind and reassure yourself that everything will be okay ☺️")
@@ -24,19 +26,21 @@ struct Affirmations: View {
             .padding(30)
         
         let randomFacts = ["You are enough and you have enough", "You are in the right place, at the right time, doing the right thing", "You can do hard things", "You are worthy of what you desire", "You are resilient in the face of challenges", "You should be proud of yourself and your achievements", "You will accomplish everything you need to do today", "You do your best, and your best is good enough", "You should prioritize your well-being", "You can overcome your fears by getting out of your comfort zone", "You are love, and you are loved", "You should trust your inner guidance and follow it", "You should accept your emotions and let them move through you", "You should take care of yourself, mind, body, and spirit", "You can trust yourself to make the right decisions", "You should use your voice to speak up for yourself and others", "You can trust that your heading in the right direction"]
-            
         
-        VStack() {
-            Text(factText)
-            
-            Button("Click") {
-                let fact = randomFacts.randomElement()!
-                factText = fact
-            }.buttonStyle(.borderedProminent)
-            
-            Image("Affirmation")
-                .resizable(resizingMode: .stretch)
-                .aspectRatio(contentMode: .fit)
+        
+                VStack() {
+                    Text(factText)
+                    
+                    Button("Click") {
+                        let fact = randomFacts.randomElement()!
+                        factText = fact
+                    }.buttonStyle(.borderedProminent)
+                    
+                    Image("Affirmation")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                }
+            }
         }
     }
     

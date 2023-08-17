@@ -13,7 +13,7 @@ struct ContentView: View {
         
         NavigationStack {
             
-            ZStack {Color(red: 0.775, green: 0.859, blue: 0.955) .ignoresSafeArea()
+            ZStack {Color(red: 0.998, green: 0.964, blue: 0.904) .ignoresSafeArea()
                 
                 VStack {
                     
@@ -27,6 +27,10 @@ struct ContentView: View {
                     Text("A Way to Aid Your Mental Health ✨")
                         .fontWeight(.medium)
                         .font(.title)
+                        .foregroundColor(Color.blue)
+                    
+                        .multilineTextAlignment(.center)
+                        .padding()
                     
                     VStack {
                                         

@@ -14,64 +14,64 @@ struct ToDoList: View {
     
     var body: some View {
         
-        VStack {
-            HStack {
-                //Add a Text View containing the string "ToDoList" and modifiers here
-                
-                Text("To Do List")
-                    .font(.system(size: 40))
-                    .fontWeight(.black)
-            
-                //Add a Spacer here
-                
-                Spacer()
-                
-                //Add a Button here with Text("+") and delete any code in the action
-                
-                Button(action: {
+        ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+            VStack {
+                VStack {
+                    HStack {
+                        
+                        Text("To Do List")
+                            .font(.system(size: 40))
+                            .fontWeight(.bold)
+                        
+                        Spacer()
+                        
+                        
+                        Button(action: {
+                            
+                            self.showNewTask = true
+                            
+                            
+                        }) {
+                            Text("+")
+                        }
+                        
+                    }.padding()
                     
-                    self.showNewTask = true
+                    Spacer()
                     
-                    
-                }) {
-                    Text("+")
+                    ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+                        List {
+                            
+                            ForEach (toDoItems) {
+                                toDoItem in
+                                
+                                if toDoItem.isImportant == false {
+                                    Text("" + toDoItem.title)
+                                } else {
+                                    Text("‼️" + toDoItem.title)
+                                }
+                            }
+                            .listRowBackground(Color.pink)
+                            
+                            
+                        }.background()
+                    }
+                        
+                    }
+                        
+                        
+                        if showNewTask {
+                            NewToDoView(title: "", isImportant: false, toDoItems: $toDoItems)
+                        }
+                        
+                    }
                 }
-                
-            }.padding()
-            //Add a padding modifier here
-
-            //A a Spacer here
-            
-            Spacer()
-            
-            List {
-                
-                ForEach (toDoItems) {
-                    toDoItem in
-                    
-                    Text("‼️" + toDoItem.title)
-                }
-                
-                
             }
-            
+            }
+        
+        struct ToDoList_Previews: PreviewProvider {
+            static var previews: some View {
+                ContentView()
+            }
         }
-        
-        
-        if showNewTask {
-            NewToDoView(title: "", isImportant: false, toDoItems: $toDoItems)
-        }
-        
-        
-        
-        
-    }
-}
-
-struct ToDoList_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
-
-
+    

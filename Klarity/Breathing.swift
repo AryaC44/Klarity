@@ -9,16 +9,19 @@ import SwiftUI
 
 struct Breathing: View {
     
-        var body: some View {
-            
-            VStack{
-            
+    var body: some View {
+        
+        ZStack {Color(red: 0.727, green: 0.859, blue: 0.955).ignoresSafeArea()
+            VStack {
+                VStack{
+                    
                     Text("Breathing Exercises")
                         .font(.largeTitle)
-                        .fontWeight(.black)
+                        .fontWeight(.bold)
                         .padding(40)
                     
-                    Text("These exercises will help you feel more relaxed and relieve any worries or stress that you have 🧘")
+                    Text("These exercises will help you feel more relaxed and relieve any worries or stress that you have")
+                        .multilineTextAlignment(.center)
                         .padding(30)
                     
                     Text("Choose duration of exercise below:")
@@ -35,12 +38,12 @@ struct Breathing: View {
                         .aspectRatio(contentMode: .fit)
                     
                 }
-            .accentColor(Color.black)
-            .background(Color.blue)
                 
+            }
         }
     }
-    
+}
+
     struct Breathing_Previews: PreviewProvider {
         static var previews: some View {
             Breathing()

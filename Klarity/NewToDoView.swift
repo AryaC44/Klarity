@@ -16,34 +16,35 @@ struct NewToDoView: View {
     
     var body: some View {
         
-        
-        VStack {
-            
-            Text("Task title:")
-            
-            TextField("Enter task description...", text: $title).padding()
-                .background(Color(.systemGroupedBackground))
-                    .cornerRadius(15)
-                    .padding()
-            
-            Toggle(isOn: $isImportant) {
-                Text("Is this task urgent?")
-            
-                Button(action: {
+        ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+            VStack{
+                VStack {
                     
-                    self.addTask(title: self.title, isImportant: self.isImportant)
-
-                }) {
-                    Text("Add")
-                }
+                    Text("Task title:")
+                    
+                    TextField("Enter task description...", text: $title).padding()
+                        .background(Color(.systemGroupedBackground))
+                        .cornerRadius(15)
+                        .padding()
+                    
+                    Toggle(isOn: $isImportant) {
+                        Text("Is this task urgent?")
+                        
+                        Button(action: {
+                            
+                            self.addTask(title: self.title, isImportant: self.isImportant)
+                            
+                        }) {
+                            Text("Add")
+                        }
+                        
+                        
+                    }.padding()
+                    
+                }.padding()
                 
-            
-            }.padding()
-            
-        }.padding()
-        
-       
-
+            }
+        }
     }
     
     
