@@ -16,9 +16,12 @@ struct Breathing: View {
                 Text("Breathing Exercises")
                     .font(.largeTitle)
                     .fontWeight(.black)
+                    .padding(40)
                 
+                Text("These exercises will help you feel more relaxed and relieve any worries or stress that you have 🧘")
                 
                 Text("Choose duration of exercise below:")
+                    .padding(20)
                 
                 Link("1 Minute", destination: URL(string: "https://www.youtube.com/watch?v=u9Q8D6n-3qw")!)
                 
