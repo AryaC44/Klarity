@@ -22,9 +22,9 @@ struct Breathing: View {
                 
                 Link("1 Minute", destination: URL(string: "https://www.youtube.com/watch?v=u9Q8D6n-3qw")!)
                 
-                Link("5 Minute", destination: URL(string: "")!)
+                Link("5 Minutes", destination: URL(string: "https://www.youtube.com/watch?v=IYaCnVKhZv8")!)
                 
-                Link("10 Minute", destination: URL(string: "")!)
+                Link("10 Minutes", destination: URL(string: "https://www.youtube.com/watch?v=aXItOY0sLRY")!)
                 
             }
            
