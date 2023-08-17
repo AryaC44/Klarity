@@ -23,6 +23,12 @@ struct Journal: View {
                 .padding()
                 .border(Color.blue, width: 4)
             
+            Text("How are you feeling today?")
+            
+                Button("Anxious") {
+                    
+                }
+
         }
     }
     

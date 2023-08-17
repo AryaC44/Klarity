@@ -15,6 +15,8 @@
 		BDB2256A2A8BF85C007E1FC4 /* ToDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB225692A8BF85C007E1FC4 /* ToDoList.swift */; };
 		BDB2256C2A8BF869007E1FC4 /* Affirmations.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2256B2A8BF869007E1FC4 /* Affirmations.swift */; };
 		BDB2256E2A8BF877007E1FC4 /* Breathing.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB2256D2A8BF877007E1FC4 /* Breathing.swift */; };
+		BDDCD1C92A8E691800B10B2C /* NewToDoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCD1C82A8E691800B10B2C /* NewToDoView.swift */; };
+		BDDCD1CB2A8E692300B10B2C /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDCD1CA2A8E692300B10B2C /* ToDoItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		BDB225692A8BF85C007E1FC4 /* ToDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList.swift; sourceTree = "<group>"; };
 		BDB2256B2A8BF869007E1FC4 /* Affirmations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Affirmations.swift; sourceTree = "<group>"; };
 		BDB2256D2A8BF877007E1FC4 /* Breathing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Breathing.swift; sourceTree = "<group>"; };
+		BDDCD1C82A8E691800B10B2C /* NewToDoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewToDoView.swift; sourceTree = "<group>"; };
+		BDDCD1CA2A8E692300B10B2C /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				BD21EC7F2A8BF5F800D33EDD /* ContentView.swift */,
 				BDB225672A8BF845007E1FC4 /* Journal.swift */,
 				BDB225692A8BF85C007E1FC4 /* ToDoList.swift */,
+				BDDCD1C82A8E691800B10B2C /* NewToDoView.swift */,
+				BDDCD1CA2A8E692300B10B2C /* ToDoItem.swift */,
 				BDB2256B2A8BF869007E1FC4 /* Affirmations.swift */,
 				BDB2256D2A8BF877007E1FC4 /* Breathing.swift */,
 				BD21EC812A8BF5F900D33EDD /* Assets.xcassets */,
@@ -151,9 +157,11 @@
 			files = (
 				BD21EC802A8BF5F800D33EDD /* ContentView.swift in Sources */,
 				BD21EC7E2A8BF5F800D33EDD /* KlarityApp.swift in Sources */,
+				BDDCD1C92A8E691800B10B2C /* NewToDoView.swift in Sources */,
 				BDB2256E2A8BF877007E1FC4 /* Breathing.swift in Sources */,
 				BDB225682A8BF845007E1FC4 /* Journal.swift in Sources */,
 				BDB2256C2A8BF869007E1FC4 /* Affirmations.swift in Sources */,
+				BDDCD1CB2A8E692300B10B2C /* ToDoItem.swift in Sources */,
 				BDB2256A2A8BF85C007E1FC4 /* ToDoList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
