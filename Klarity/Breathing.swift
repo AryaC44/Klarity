@@ -9,28 +9,27 @@ import SwiftUI
 
 struct Breathing: View {
     
-    var body: some View {
-        
-        VStack{
+        var body: some View {
             
-            Text("Breathing Exercises")
-                .font(.largeTitle)
-            
-            Text("Choose duration of exercise below:")
-            
-            Button("1 Minute") {
-                Link(<#LocalizedStringKey#>, destination: URL(string: "github.com/AryaC44/Klarity/settings/access?guidance_task=")!)
-                   
-                }
-            }
-            Button("5 Minutes") {
+            VStack{
+                
+                Text("Breathing Exercises")
+                    .font(.largeTitle)
+                    .fontWeight(.black)
+                
+                
+                Text("Choose duration of exercise below:")
+                
+                Link("1 Minute", destination: URL(string: "https://www.youtube.com/watch?v=u9Q8D6n-3qw")!)
+                
+                Link("5 Minute", destination: URL(string: "")!)
+                
+                Link("10 Minute", destination: URL(string: "")!)
                 
             }
-            Button("10 Minutes") {
-                
-            }
+           
             
-
+            
         }
     }
     
@@ -39,4 +38,4 @@ struct Breathing: View {
             Breathing()
         }
     }
-}
+
