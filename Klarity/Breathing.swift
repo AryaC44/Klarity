@@ -35,6 +35,8 @@ struct Breathing: View {
                         .aspectRatio(contentMode: .fit)
                     
                 }
+            .accentColor(Color.black)
+            .background(Color.blue)
                 
         }
     }
