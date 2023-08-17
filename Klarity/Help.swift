@@ -10,23 +10,29 @@ import SwiftUI
 struct Help: View {
     var body: some View {
         
+        
         VStack {
             
-            Text("Click the links below to access mental health resources:")
-                .font(.largeTitle)
-                .fontWeight(.medium)
-                .padding(40)
-            
-            Link("1. Mental Health Helplines (International)", destination: URL(string: "https://www.helpguide.org/find-help.htm")!)
-            
-            Link("2. CDC Resources", destination: URL(string: "https://www.cdc.gov/mentalhealth/tools-resources/index.htm")!)
-            
-            Link("3. National Institute of Mental Health", destination: URL(string: "https://www.nimh.nih.gov/health/find-help")!)
-            
-        
+            ZStack { Color(red: 0.775, green: 0.859, blue: 0.955) .ignoresSafeArea() }
+             
+                Text("Click the links below to access mental health resources:")
+                    .font(.largeTitle)
+                    .fontWeight(.medium)
+                    .padding(40)
+                
+                Link("1. Mental Health Helplines (International)", destination: URL(string: "https://www.helpguide.org/find-help.htm")!)
+                .padding(10)
+                
+                Link("2. CDC Resources", destination: URL(string: "https://www.cdc.gov/mentalhealth/tools-resources/index.htm")!)
+                .padding(10)
+                
+                Link("3. National Institute of Mental Health", destination: URL(string: "https://www.nimh.nih.gov/health/find-help")!)
+                .padding(10)
+                
+            }
         }
     }
-}
+    
 
 struct Help_Previews: PreviewProvider {
     static var previews: some View {
