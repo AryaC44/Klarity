@@ -23,7 +23,10 @@ struct ContentView: View {
                         .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566))
                         .multilineTextAlignment(.center)
                         .padding(40)
-                    Text("Mental Health")
+                    
+                    Text("A Way to Aid Your Mental Health ✨")
+                        .fontWeight(.medium)
+                        .font(.title)
                     
                     VStack {
                                         
