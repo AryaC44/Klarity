@@ -19,14 +19,10 @@ struct Journal: View {
             Text("Daily Journal")
                 .font(.title)
                 .fontWeight(.bold)
-            
-            
-            TextField("Begin writing your daily journal entry...", text: $text)
                 .padding()
-                .border(Color.blue, width: 4)
             
             Text("How are you feeling today?")
-            
+                .font(.title)
             
             Button("Anxious") {
                 answer = "😬"
@@ -45,16 +41,30 @@ struct Journal: View {
             Button("Scared") {
                 answer = "😰"
             }
-            Text(answer) {
-                .font(.system(size: 80))
-            }
             
-            }
-        
-        struct Journal_Previews: PreviewProvider {
-            static var previews: some View {
-                Journal()
-            }
+            Text(String(answer))
+            .font(.system(size: 80))
+            
+            TextField("Begin writing your daily journal entry...", text: $text, axis: .vertical)
+                .padding()
+                .border(Color.blue, width: 4)
+            
+       
         }
+        .padding()
+        
+        if answer == "😬" {
+          Text("A")
+        } else if answer == "😢" {
+            Text("B")
+        }
+        
+        
+    
+    }
+}
+struct Journal_Previews: PreviewProvider {
+    static var previews: some View {
+        Journal()
     }
 }
