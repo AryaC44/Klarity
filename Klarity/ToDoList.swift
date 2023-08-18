@@ -19,7 +19,7 @@ struct ToDoList: View {
                 VStack {
                     HStack {
                         
-                        Text("To Do List")
+                        Text("To-Do List 📌")
                             .font(.system(size: 40))
                             .fontWeight(.bold)
                         

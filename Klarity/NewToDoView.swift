@@ -21,6 +21,8 @@ struct NewToDoView: View {
                 VStack {
                     
                     Text("Task title:")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
                     
                     TextField("Enter task description...", text: $title).padding()
                         .background(Color(.systemGroupedBackground))
@@ -29,6 +31,8 @@ struct NewToDoView: View {
                     
                     Toggle(isOn: $isImportant) {
                         Text("Is this task urgent?")
+                            .font(.title2)
+                            .fontWeight(.medium)
                         
                         Button(action: {
                             
@@ -36,6 +40,8 @@ struct NewToDoView: View {
                             
                         }) {
                             Text("Add")
+                                .font(.title)
+                                .foregroundColor(.pink)
                         }
                         
                         

@@ -22,42 +22,49 @@ struct ContentView: View {
                         .fontWeight(.bold)
                         .foregroundColor(Color(red: 0.184, green: 0.481, blue: 0.877))
                         .multilineTextAlignment(.center)
-                        .padding(40)
+                        
                     
-                    Text("A Way to Aid Your Mental Health ✨")
+                    Text("A Way to Aid Your Mental Health")
                         .fontWeight(.medium)
-                        .font(.title)
+                        .font(.title2)
                         .foregroundColor(Color.blue)
-                    
                         .multilineTextAlignment(.center)
-                        .padding()
+                        
+                    
+                    Image("brain")
+                        .resizable(resizingMode: .stretch)
+                        .aspectRatio(contentMode: .fit)
+                    
+                    Text("Click any link below!")
+                        .font(.headline)
+                        .multilineTextAlignment(.center)
                     
                     VStack {
                                         
                         NavigationLink(destination: Journal()) {
-                            Text("Journal")
+                            Text("Journal 📔")
                                 .font(.title)
                             .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
                         NavigationLink(destination: ToDoList()) {
-                            Text("To-Do List")
+                            Text("To-Do List 📌")
                                 .font(.title)
                             .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
                         NavigationLink(destination: Affirmations()){
-                            Text("Affirmations")
+                            Text("Affirmations 💕")
                                 .font(.title)
                             .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
                         NavigationLink(destination: Breathing()) {
-                            Text("Breathing Exercises")
+                            Text("Breathing Exercises 🧘")
                                 .font(.title)
                             .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
                         NavigationLink(destination: Help()) {
-                            Text("Resources")
+                            Text("Resources ☎️")
                                 .font(.title)
-                            .foregroundColor(.red) }
+                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
                         
                         }
                     }

@@ -13,13 +13,13 @@ struct Affirmations: View {
     
     var body: some View {
         
-        ZStack {Color(red: 0.775, green: 0.716, blue: 0.841).ignoresSafeArea()
+        ZStack {Color(hue: 0.647, saturation: 0.576, brightness: 0.903).ignoresSafeArea()
             VStack {
-        Text("Affirmations")
+        Text("Affirmations 💕")
             .font(.largeTitle)
             .fontWeight(.bold)
             .padding(10)
-        
+                
         Text("If you are feeling stressed, sad, or anxious about anything, affirmations are a great way to ease your mind and reassure yourself that everything will be okay ☺️")
             .font(.title3)
             .fontWeight(.bold)
@@ -35,6 +35,7 @@ struct Affirmations: View {
                         let fact = randomFacts.randomElement()!
                         factText = fact
                     }.buttonStyle(.borderedProminent)
+                     .tint(.purple)
                     
                     Image("Affirmation")
                         .resizable(resizingMode: .stretch)

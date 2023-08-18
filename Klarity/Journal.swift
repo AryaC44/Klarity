@@ -19,15 +19,16 @@ struct Journal: View {
             VStack {
                 VStack {
                     
-                    Text("Daily Journal")
-                        .font(.title)
+                    Text("Daily Journal 📔")
+                        .font(.largeTitle)
                         .fontWeight(.bold)
                         .foregroundColor(Color(hue: 0.78, saturation: 1.0, brightness: 0.544))
                         .multilineTextAlignment(.center)
                         .padding()
                     
                     Text("How are you feeling today?")
-                        .font(.title)
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color(hue: 0.641, saturation: 1.0, brightness: 0.442))
                         .multilineTextAlignment(.center)
                     
@@ -75,6 +76,8 @@ struct Journal: View {
                 VStack {
                     
                     Text("Or if you are unsure of what to write, you can select a prompt below:")
+                        .font(.title2)
+                        .fontWeight(.semibold)
                         .foregroundColor(Color(hue: 0.641, saturation: 1.0, brightness: 0.442))
                         
                     
