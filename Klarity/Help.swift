@@ -15,7 +15,7 @@ struct Help: View {
                 VStack {
                 
                     Text("Click the links below to access mental health resources: ☎️")
-                        .font(.largeTitle)
+                        .font(.title)
                         .fontWeight(.bold)
                         .multilineTextAlignment(.center)
                         .padding(40)

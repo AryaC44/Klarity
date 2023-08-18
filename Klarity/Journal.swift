@@ -66,9 +66,6 @@ struct Journal: View {
                         Text("I'm scared because...")
                     }
                     
-                    TextField("Write about how you're feeling...", text: $text, axis: .vertical)
-                        .padding()
-                        .border(Color.purple, width: 4)
                 }
                 
                 .padding()
@@ -99,9 +96,9 @@ struct Journal: View {
                     
                     Text(String(prompt))
                     
-                    TextField("Write about prompt...", text: $text, axis: .vertical)
+                    TextField("Write about how you're feeling...", text: $text, axis: .vertical)
                         .padding()
-                        .border(Color.blue, width: 4)
+                        .border(Color.blue, width: 5)
                 }
                 .padding()
             }
