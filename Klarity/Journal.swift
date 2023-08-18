@@ -15,19 +15,20 @@ struct Journal: View {
     
     var body: some View {
         
-        ZStack {Color(red: 0.998, green: 0.866, blue: 0.838).ignoresSafeArea()
+        ZStack {Color(hue: 0.747, saturation: 0.476, brightness: 1.0).ignoresSafeArea()
             VStack {
                 VStack {
                     
                     Text("Daily Journal")
                         .font(.title)
                         .fontWeight(.bold)
+                        .foregroundColor(Color(hue: 0.822, saturation: 0.833, brightness: 0.919))
                         .multilineTextAlignment(.center)
                         .padding()
                     
-                    
                     Text("How are you feeling today?")
                         .font(.title)
+                        .foregroundColor(Color(red: 0.756, green: 0.573, blue: 1.0))
                         .multilineTextAlignment(.center)
                     
                     Button("Anxious") {

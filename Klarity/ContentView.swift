@@ -13,14 +13,14 @@ struct ContentView: View {
         
         NavigationStack {
             
-            ZStack {Color(red: 0.998, green: 0.964, blue: 0.904) .ignoresSafeArea()
+            ZStack{Color(red: 0.176, green: 0.171, blue: 0.246).ignoresSafeArea()
                 
                 VStack {
                     
                     Text("Welcome to Klarity!")
                         .font(.largeTitle)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566))
+                        .foregroundColor(Color(red: 0.184, green: 0.481, blue: 0.877))
                         .multilineTextAlignment(.center)
                         .padding(40)
                     
@@ -57,7 +57,7 @@ struct ContentView: View {
                         NavigationLink(destination: Help()) {
                             Text("Resources")
                                 .font(.title)
-                            .foregroundColor(Color(hue: 0.598, saturation: 0.93, brightness: 0.566)) }
+                            .foregroundColor(.red) }
                         
                         }
                     }
