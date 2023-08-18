@@ -14,7 +14,7 @@ struct ToDoList: View {
     
     var body: some View {
         
-        ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+        ZStack {Color(hue: 0.858, saturation: 0.25, brightness: 0.957).ignoresSafeArea()
             VStack {
                 VStack {
                     HStack {
@@ -24,7 +24,6 @@ struct ToDoList: View {
                             .fontWeight(.bold)
                         
                         Spacer()
-                        
                         
                         Button(action: {
                             
@@ -39,7 +38,7 @@ struct ToDoList: View {
                     
                     Spacer()
                     
-                    ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+                    ZStack {Color(hue: 0.858, saturation: 0.25, brightness: 0.957).ignoresSafeArea()
                         List {
                             
                             ForEach (toDoItems) {
@@ -51,27 +50,27 @@ struct ToDoList: View {
                                     Text("‼️" + toDoItem.title)
                                 }
                             }
-                            .listRowBackground(Color.pink)
                             
                             
-                        }.background()
-                    }
-                        
-                    }
-                        
-                        
-                        if showNewTask {
-                            NewToDoView(title: "", isImportant: false, toDoItems: $toDoItems)
+                            
                         }
                         
                     }
+                    
+                    
+                    if showNewTask {
+                        NewToDoView(title: "", isImportant: false, toDoItems: $toDoItems)
+                    }
+                    
                 }
             }
-            }
-        
-        struct ToDoList_Previews: PreviewProvider {
-            static var previews: some View {
-                ContentView()
-            }
         }
+    }
     
+    struct ToDoList_Previews: PreviewProvider {
+        static var previews: some View {
+            ContentView()
+        }
+    }
+    
+}

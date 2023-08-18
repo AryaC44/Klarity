@@ -16,7 +16,7 @@ struct NewToDoView: View {
     
     var body: some View {
         
-        ZStack {Color(red: 0.936, green: 0.77, blue: 0.838).ignoresSafeArea()
+        ZStack {Color(hue: 0.858, saturation: 0.25, brightness: 0.957).ignoresSafeArea()
             VStack{
                 VStack {
                     

@@ -22,13 +22,13 @@ struct Journal: View {
                     Text("Daily Journal")
                         .font(.title)
                         .fontWeight(.bold)
-                        .foregroundColor(Color(hue: 0.822, saturation: 0.833, brightness: 0.919))
+                        .foregroundColor(Color(hue: 0.78, saturation: 1.0, brightness: 0.544))
                         .multilineTextAlignment(.center)
                         .padding()
                     
                     Text("How are you feeling today?")
                         .font(.title)
-                        .foregroundColor(Color(red: 0.756, green: 0.573, blue: 1.0))
+                        .foregroundColor(Color(hue: 0.641, saturation: 1.0, brightness: 0.442))
                         .multilineTextAlignment(.center)
                     
                     Button("Anxious") {
@@ -75,7 +75,8 @@ struct Journal: View {
                 VStack {
                     
                     Text("Or if you are unsure of what to write, you can select a prompt below:")
-                        .padding()
+                        .foregroundColor(Color(hue: 0.641, saturation: 1.0, brightness: 0.442))
+                        
                     
                     Button("Brain Dump") {
                         prompt = ("What was the best part of your day?, What was the worst part of your day?")

@@ -13,7 +13,7 @@ struct ContentView: View {
         
         NavigationStack {
             
-            ZStack{Color(red: 0.176, green: 0.171, blue: 0.246).ignoresSafeArea()
+            ZStack{Color(red: 0.727, green: 0.859, blue: 0.955).ignoresSafeArea()
                 
                 VStack {
                     
